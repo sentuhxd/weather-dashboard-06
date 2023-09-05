@@ -14,56 +14,51 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
-    <header>Weather Dashboard</header>
 
-
-    <div class='container'>
-
-        <div class='row'>
-  
-          <div class='col-sm-4'>
-  
-            <label for='city-search'><h2>Search for a City</h2></label>
-  
-            <div class='input-group mb-3'>
-  
-              <input type='search' class='form-control' placeholder='Search city' id='city-search'>
-  
-              <div class='input-group-append'>
-  
-                <button class='button'id='search-input' type='button/text'>Search</button>
-                 
-              </div>
-             
-            </div>
-            <ul id="list">
-            </ul>
-              
-            <button class='btn-btn-secondary' type='button'>Clear Search History</button>
-  
-            <hr>
-  
-            <div class='search-history'>
-             
-            </div>
-  
-          </div>
- 
-          <div class='col-md-8'>
-
-            <div class="d-flex flex-column">
-              <div class="p-2" id="current-weather"><h1>Current Conditions</h1></div>
-              <div class="p-2"><h1>5 day forecast</h1></div>
-           <div id="five-day" class="row" ></div>
+    <header>
+        <div class="bg-primary">
+           <div class="container">
+               <h1 class="text-center text-white">Weather Dashboard</h1>
+           </div>
+        </div>
+       </header>
+   
+       <main>
+        <div class="container-fluid">
+           <div class="row">
         
-                </div>
-              
-          </div>
+               <div class="col-3 bg-light pt-3 pb-3">
+                   <h2>Search for a City:</h2>
+                   <div class="input-group mb-3">
+                   <input name="city" id="searchTerm" type="text" autofocus="true" class="input-group-append" placeholder="Name of City">
+                   <button type="button" id="searchBtn" class="btn btn-primary btn-lg active">Search</button>
+                   </div>
+                   <div class="card">
+                       <ul class="list-group list-group-flush list">
+                       </ul>
+                   </div>
+               </div>
+          
+           <div class="col-lg-9">
+               <div id="currentCity" class="hide mt-4">
+                   <h3 class="city-name mb-1 mt-2 bolder" id="current-ctiy"></h3>
+                       <p>Temperature:<span class="current" id="temperature"></span></p>
+                       <p>Humidity:<span class="current" id="humidity"></span></p>
+                       <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                       <p>UV Index:<span class="current bg-primary rounded py-2 px-2 text-white" id="uv-index"></span></p>
+               </div>
+           </div>
+           </div>
 
-      
-      
-      </div>
-
+           <div id="five-day-forecast" class="col-md-12 mt-4 hide">
+               <h3  class="text-center mt-3">5-Day Forecast</h3>
+               <div class="row">
+                   <div class="col-sm-2 bg-primary forecast ml-2 mb-3 p-2 mt-2 justify-content-center">Temp</div>
+                   
+               </div>
+           </div>
+        </div>
+       </main>
 
 
           

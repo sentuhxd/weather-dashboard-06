@@ -26,4 +26,6 @@ THEN I am again presented with current and future conditions for that city
 
 Link to [Repo]https://github.com/sentuhxd/weather-dashboard-06
 
-Link to [Deploy]
+Link to [Deploy]https://sentuhxd.github.io/weather-dashboard-06/
+
+
